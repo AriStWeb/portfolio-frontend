@@ -1,0 +1,243 @@
+* {
+    width: auto;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: medium;
+}
+
+h2 {
+    background-color: #aeaeae;
+    text-align: center;
+}
+body{
+    background-color: #EAEAEA;
+}
+header{
+    height: 500px;
+    width: 100%;
+    background-color: #132743;
+    margin: 5px;
+}
+/* SECCIONES EN GRAL*/
+#experiencias, #habilidades, #proyectos {
+    height: auto;
+    background-color: #132743;
+    margin: 10px 0px;
+}
+#acercaDe{
+    height: 250px;
+    background-color: #132743;
+    margin: 5px 0px;
+}
+/*NAV*/
+.nav-contenedor{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav{
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+nav >li {
+    list-style: none;
+}
+li a {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 2px;
+    margin:5px;
+    border-radius: 7px;
+    font-size: 1em;
+    border: 0px;
+}
+nav li :hover {
+    background-color: #EAEAEA;
+}
+#abrirLog {
+    border: none;
+    margin: 0%;
+    border-radius: 7px;
+    color: blue;
+    background-color: transparent;
+}
+#abrirLog:hover{
+    background-color: #EAEAEA;
+}
+#caja-modal{
+    width: 100%;
+    position: fixed;
+    background-color: #999;
+    opacity: 0.8;
+    display: none;
+    z-index: 10;
+}
+#caja{
+    width: 300px;
+    height: 200px;
+    background-color: #4B3;
+    margin: auto;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+/* BANNER*/
+#contenedorBanner, #contenedor-fondo-banner, #espacio-foto-banner, #fondo-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedorBanner{
+    height: 400px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+#contenedor-fondo-banner{
+    height: 150px;
+    width: 100%;
+    background-color: rgb(102, 102, 102);
+    flex-direction: row;
+}
+#fondo-banner{
+    height: 250px;
+    width: 500px;
+    justify-content: flex-start;
+}
+#espacio-foto-banner{
+height: 100%;
+width: 50%;
+flex-direction: row;
+flex-wrap: wrap;
+}
+#foto-banner{
+    height: 100%;
+    width: 75%;
+    border-image: none;
+}
+#frase-banner p{
+    background-color: #999;
+}
+/*Abrir menu edicion*/
+.controlEdit {
+    display: none;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px 0px 30px 0px;
+    position: relative;
+    right: 10px;
+}
+.controlEdit2 {
+    position: relative;
+    display: none;
+}
+
+/* FOTO PERFIL*/
+#fotoPerfil{
+    height: 150px;
+    width: 150px;
+    background-color: #EAEAEA;
+    position: absolute;
+    top: 400px;
+    left: 10%;
+    border-radius: 75px;
+    border: solid 3px #132743 ;
+}
+/* EXPERIENCIAS*/
+#espacioExp {
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    justify-content: space-around;
+    margin: 5px 0%;
+}
+#fotoExp, #detallesExp{
+    height: 98%;
+}
+#fotoExp{
+    width: 20%;
+    background-color: #999;
+    margin: auto 7%;
+}
+#detallesExp {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+#tituloExp{
+    height: 25%;
+    width: 50%;
+    background-color: #999;
+    margin-bottom: 1%;
+}
+#espacioResumenExp{
+    height: 79%;
+    width: 85%;
+    background-color: #999;
+}
+/* EDUCACION*/
+.educacion{
+    display: flex;
+    flex-direction: column;
+    background-color: #132743;
+}
+.educacion div {
+    width: 100%;
+}
+ul {
+list-style: none;
+display: flex;
+flex-direction: row;
+width: 100%;
+height: auto;
+justify-content: center;
+}
+li{
+    margin: auto 5px;
+    text-align: center;
+}
+figure img {
+    width: 40%;
+    height: auto;
+}
+
+/* HABILIDADES*/
+.contenedor-habilidades{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* PROYECTO*/
+.cont-proyectos{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* FOOTER*/
+footer{
+    height: 200px;
+    background-color: #132743;
+}
+.contacto-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contacto-footer > h3{
+    width: 100%;
+    text-align: center;
+}
+.contacto-footer > div{
+    width: 50px;
+    height: 50px;
+    background-color: #999;
+    border-radius: 25px;
+}
