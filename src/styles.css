@@ -12,9 +12,10 @@ body{
     background-color: #EAEAEA;
 }
 header{
-    height: 500px;
+    height: auto;
     width: 100%;
     background-color: #132743;
+    padding: 20px;
     margin: 5px;
 }
 /* SECCIONES EN GRAL*/
@@ -88,11 +89,13 @@ nav li :hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:30px;
 }
 #contenedorBanner{
-    height: 400px;
+    height: auto;
     margin: 10px;
     flex-wrap: wrap;
+    padding: 50px;
 }
 #contenedor-fondo-banner{
     height: 150px;
@@ -141,7 +144,6 @@ flex-wrap: wrap;
     height: 150px;
     width: 150px;
     background-color: #EAEAEA;
-    position: absolute;
     top: 400px;
     left: 10%;
     border-radius: 75px;

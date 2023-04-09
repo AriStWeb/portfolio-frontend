@@ -1,0 +1,12 @@
+.form-contorl{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    align-items: center;
+    position:relative;
+    margin-top: 10px;
+}
+.form-contorl > div{
+    margin: 8px;
+}
