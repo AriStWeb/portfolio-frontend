@@ -18,7 +18,7 @@
     </div>
   </div>
   <!--BANNER-->
-  <div *ngFor="let Banner of banner" >
+  <div *ngFor="let Banner of banner; let i=index" > 
     <div id="contenedorBanner" >
       <div id="contenedor-fondo-banner">
         <div id="fondo-banner">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="container text-center">
-      <app-btn-editar *ngIf="userLog" (onNewDato)="guardarBanner($event)"></app-btn-editar>
+      <app-btn-editar *ngIf="userLog" [Dato]="Banner" [id]="i" (onNewDato)="guardarBanner($event)"></app-btn-editar>
     </div>
   </div>
 </header>
