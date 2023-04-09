@@ -13,6 +13,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EditingFormComponent } from './components/editing-form/editing-form.component';
 import { BtnEditarComponent} from './components/btn-editar/btn-editar.component';
+import { BtnEliminarComponent } from './components/btn-eliminar/btn-eliminar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BtnEditarComponent} from './components/btn-editar/btn-editar.component'
     ProjectComponent,
     FooterComponent,
     EditingFormComponent,
-    BtnEditarComponent
+    BtnEditarComponent,
+    BtnEliminarComponent
     ],
   imports: [
     BrowserModule,

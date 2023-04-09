@@ -16,4 +16,10 @@ export class DatoserviceService {
   getDato():Observable<Dato[]> {
     return this.http.get<Dato[]>(this.urlApiHeader);
   }
+
+  eliminarRegistro(Dato:Dato):Observable<Dato>{
+    const url = `${this.urlApiHeader}/${Dato.id}`;
+    console.log(url);
+    return this.http.delete<Dato>(url);
+  }
 }

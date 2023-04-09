@@ -34,6 +34,7 @@
     </div>
     <div class="container text-center">
       <app-btn-editar *ngIf="userLog" [Dato]="Banner" [id]="i" (onNewDato)="guardarBanner($event)"></app-btn-editar>
+      <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="Banner" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
     </div>
   </div>
 </header>
