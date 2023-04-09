@@ -1,0 +1,108 @@
+ {
+    "header": [{
+        "id": 1,
+        "logo": "https://pbs.twimg.com/media/E8YoUlFWEAAeBu_?format=jpg&name=small",
+        "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-programacion_114360-1351.jpg?w=740&t=st=1681010223~exp=1681010823~hmac=39cb2d33d5d1bac68cc99787a12360be8a74d98400b1649f50239a0909317d1f",
+        "title": "no es solo un programita",
+        "detail": " conocimiento + tiempo + creatividad "
+    },
+    {
+        "id": 2,
+        "logo": "https://pbs.twimg.com/media/E8YoUlFWEAAeBu_?format=jpg&name=small",
+        "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-codificacion-manual_114360-8413.jpg?w=740&t=st=1681074831~exp=1681075431~hmac=d253d065b4ad7a7728fe87f488f096fd2656345f5ee1274d1ac88da5881e2604",
+        "title": "no es solo un programita",
+        "detail": " conocimiento + tiempo + creatividad "
+    }],
+    "aboutMe": [{
+        "img": "././assets/img/bannerImg.png",
+        "title": "Desarrollador Backend",
+        "nombre": "nombre",
+        "detail": "*******************"
+    }],
+    "works": [{
+        "img": "././assets/img/bannerImg.png",
+        "title": "esperiencia laboral 1",
+        "detail": "escuela secundaria colegio 14 como practica de finalizacion de carrera de pregrado"
+    },
+    {
+        "img": "././assets/img/bannerImg.png",
+        "title": "esperiencia laboral 2",
+        "detail": "domicilio particular"
+    },
+    {
+        "img": "././assets/img/bannerImg.png",
+        "title": "esperiencia laboral 3",
+        "detail": "practica de catedra internet serv y diseño"
+    }
+    ],
+    "education": [{
+       " img": "././assets/img/bannerImg.png",
+        "title": "titulo educacion 1",
+        "detail": "pequeña reseña de formacion"
+    },
+    {
+        "img": "././assets/img/bannerImg.png",
+        "title": "titulo educacion 2",
+        "detail": "pequeña reseña de formacion"
+    }],
+    "skill": [{
+        " img": "././assets/img/bannerImg.png",
+         "title": "habilidad 1",
+         "detail": "70%"
+     },
+     {
+         "img": "././assets/img/bannerImg.png",
+         "title": "Habilidad 2",
+         "detail": "80%"
+     },
+     {
+        " img": "././assets/img/bannerImg.png",
+         "title": "habilidad 3",
+         "detail": "70%"
+     },
+     {
+         "img": "././assets/img/bannerImg.png",
+         "title": "Habilidad 4",
+         "detail": "80%"
+     }],
+     "project": [{
+        " img": "././assets/img/bannerImg.png",
+         "title": "proyecto 1",
+         "detail": "detalles de proyecto"
+     },
+     {
+         "img": "././assets/img/bannerImg.png",
+         "title": "proyecto 2",
+         "detail": "detalles de proyecto"
+     },
+     {
+        " img": "././assets/img/bannerImg.png",
+         "title": "proyecto 3",
+         "detail": "detalles de proyecto"
+     },
+     {
+         "img": "././assets/img/bannerImg.png",
+         "title": "proyecto 4",
+         "detail": "detalles de proyecto"
+     }],
+     "footer": [{
+        " img": "././assets/img/bannerImg.png",
+         "title": "enlace 1",
+         "detail": ""
+     },
+     {
+         "img": "././assets/img/bannerImg.png",
+         "title": "enlace 2",
+         "detail": ""
+     },
+     {
+        " img": "././assets/img/bannerImg.png",
+         "title": "enlace 3",
+         "detail": ""
+     },
+     {
+         "img": "././assets/img/bannerImg.png",
+         "title": "enlace 4",
+         "detail": ""
+     }]
+}
