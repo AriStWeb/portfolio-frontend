@@ -22,4 +22,9 @@ export class DatoserviceService {
     console.log(url);
     return this.http.delete<Dato>(url);
   }
+
+  modifcarRegistro(dato:Dato): Observable<Dato> {
+    const url = `${this.urlApiHeader}/${dato.id}`
+    return this.http.put<Dato>(url, dato);
+  }
 }

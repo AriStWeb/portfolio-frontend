@@ -21,7 +21,14 @@ export class HeaderComponent implements OnInit {
   }
 
   guardarBanner(newBanner: Dato) {
-    this.banner[0] = newBanner;
+    for (let elemento of this.banner){
+      if (elemento.id === newBanner.id){
+        this.datoService.modifcarRegistro(newBanner).subscribe(() => {
+          this.banner = this.banner.filter(r => r.id !== newBanner.id);
+          window.location.reload();})
+      }
+    }
+     
   }
 
   eliminarRegistro(registro:Dato){

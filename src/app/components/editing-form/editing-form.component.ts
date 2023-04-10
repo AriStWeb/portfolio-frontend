@@ -19,7 +19,8 @@ onSubmit(){
   if (this.img.length === 0 && this.title.length === 0 && this.detail.length === 0) {
     alert("Error no se ingreso ningun cambio!");
   }
-  const newDato = { img : this.img, title: this.title, detail: this.detail, id :this.Dato?.id }
+  const newDato = { img : this.img, title: this.title, detail: this.detail, id : this.Dato?.id };
   this.onEditDato.emit(newDato);
+  
 }
 }

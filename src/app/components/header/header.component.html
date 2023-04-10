@@ -22,18 +22,18 @@
     <div id="contenedorBanner" >
       <div id="contenedor-fondo-banner">
         <div id="fondo-banner">
-          <div id="espacio-foto-banner">
+          <div id="espacio-foto-banner" >
             <img [src]="Banner.img" id="foto-banner">
           </div>
           <div id="frase-banner">
-            <h3>{{Banner.title}}</h3>
+            <h3>{{Banner.title}} </h3>
             <p>{{Banner.detail}}</p>
           </div>
         </div>
       </div>
     </div>
     <div class="container text-center">
-      <app-btn-editar *ngIf="userLog" [Dato]="Banner" [id]="i" (onNewDato)="guardarBanner($event)"></app-btn-editar>
+      <app-btn-editar *ngIf="userLog" [Dato]="Banner" [id]="i+1" (onNewDato)="guardarBanner($event)"></app-btn-editar>
       <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="Banner" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
     </div>
   </div>

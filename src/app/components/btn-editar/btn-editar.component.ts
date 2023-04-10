@@ -8,6 +8,7 @@ import { Dato } from 'src/app/interface';
 })
 export class BtnEditarComponent {
   @Input() Dato?:Dato;
+  @Input() id:number=0;
   @Output() onNewDato:EventEmitter<Dato> = new EventEmitter();
   activarEditarDato:boolean=false;
   
@@ -15,9 +16,9 @@ export class BtnEditarComponent {
   editarBanner(){
   this.activarEditarDato = !this.activarEditarDato;
   console.log(this.activarEditarDato);
-  }
+   }
   
   editarDato(newDato:Dato){
-    this.onNewDato.emit(newDato);
+       this.onNewDato.emit(newDato);
     }
 }
