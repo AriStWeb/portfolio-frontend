@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { EditingFormComponent } from './components/editing-form/editing-form.component';
 import { BtnEditarComponent} from './components/btn-editar/btn-editar.component';
 import { BtnEliminarComponent } from './components/btn-eliminar/btn-eliminar.component';
+import { BtnAgregarComponent } from './components/btn-agregar/btn-agregar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BtnEliminarComponent } from './components/btn-eliminar/btn-eliminar.com
     FooterComponent,
     EditingFormComponent,
     BtnEditarComponent,
-    BtnEliminarComponent
+    BtnEliminarComponent,
+    BtnAgregarComponent
     ],
   imports: [
     BrowserModule,

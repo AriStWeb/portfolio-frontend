@@ -8,7 +8,6 @@ import { Dato } from 'src/app/interface';
 })
 export class BtnEditarComponent {
   @Input() Dato?:Dato;
-  @Input() id:number=0;
   @Output() onNewDato:EventEmitter<Dato> = new EventEmitter();
   activarEditarDato:boolean=false;
   

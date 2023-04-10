@@ -27,4 +27,8 @@ export class DatoserviceService {
     const url = `${this.urlApiHeader}/${dato.id}`
     return this.http.put<Dato>(url, dato);
   }
+
+  altaRegistro(dato: Dato): Observable<Dato> {
+    return this.http.post<Dato>(this.urlApiHeader, dato);
+  }
 }
