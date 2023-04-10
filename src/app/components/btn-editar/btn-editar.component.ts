@@ -1,4 +1,4 @@
-import { Component,Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Dato } from 'src/app/interface';
 
 @Component({
@@ -7,17 +7,18 @@ import { Dato } from 'src/app/interface';
   styleUrls: ['./btn-editar.component.css']
 })
 export class BtnEditarComponent {
-  @Input() Dato?:Dato;
-  @Output() onNewDato:EventEmitter<Dato> = new EventEmitter();
-  activarEditarDato:boolean=false;
-  
-  
-  editarBanner(){
-  this.activarEditarDato = !this.activarEditarDato;
-  console.log(this.activarEditarDato);
-   }
-  
-  editarDato(newDato:Dato){
-       this.onNewDato.emit(newDato);
-    }
+  @Input() Dato?: Dato;
+  @Output() onNewDato: EventEmitter<Dato> = new EventEmitter();
+  activarEditarDato: boolean = false;
+
+
+  editarBanner() {
+    this.activarEditarDato = !this.activarEditarDato;
+    console.log(this.activarEditarDato);
+  }
+
+  editarDato(newDato: Dato) {
+    this.onNewDato.emit(newDato);
+    console.log(newDato);
+  }
 }

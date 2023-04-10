@@ -1,0 +1,19 @@
+.opcionesEdit{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+h2{
+    text-align: center;
+    color:white;
+    background-color: transparent;
+}
+h3{
+    text-align: start;
+    background-color: aliceblue;
+    border-left: solid 3px coral;
+}
+p{
+    color:white;
+    border-left: solid 3px coral;
+}

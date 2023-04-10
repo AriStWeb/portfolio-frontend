@@ -1,21 +1,28 @@
-<!--Foto de Perfil-->
-<img src="img/fotoPerfil.png" alt="fotoPerfil" id="fotoPerfil">
-<!--Acerca De-->
-<section id="acercaDe">
-  <div class="container-fluid">
-    <div class="row  justify-content-around aling-content-center">
-      <div class="col-3 mt-3 ">
-
-      </div>
-      <div class="col-8 mt-3">
-        <h2>titulo</h2>
-      </div>
-      <div class=" col-3  mt-3 h-50 bg-light">
-        <h2>Nombre de propietario portfolioWeb</h2>
-      </div>
-      <div class=" col-8 mt-3 bg-light">
-        <p>resumen</p>
+<div *ngFor="let sobreMi of aboutMe; let i=index">
+  <div style="width: auto; height: 5px;">
+    <!--Foto de Perfil-->
+<img [src]="sobreMi.img" alt="fotoPerfil" id="fotoPerfil" style="width: 200px; height: 200px;">
+</div>
+  <!--Acerca De-->
+  <section id="acercaDe">  
+    <div class="container-fluid">
+      <div class="row  justify-content-around aling-content-center">
+        <div class="col-3 mt-3 ">
+        </div>
+        <div class="col-8 mt-3">
+          <h3>{{sobreMi.title}}</h3>
+        </div>
+        <div class=" col-3  mt-4 h-50 ">
+          <h2>{{propietario}}</h2>
+        </div>
+        <div class=" col-8 mt-4 ">
+          <p>{{sobreMi.detail}}</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="opcionesEdit">
+    <app-btn-editar class="m-3" [Dato]="sobreMi" (onNewDato)=" guardarSobreMi($event)"></app-btn-editar>
+    </div>
+  </section>
+  
+</div>
