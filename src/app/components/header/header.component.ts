@@ -10,13 +10,14 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
 export class HeaderComponent implements OnInit {
   banner: Dato[] = [];
   userLog: boolean = true; //pensado para log
-  activarOpcionEliminar: boolean = false;
-  activarOpcionAgregar: boolean = false;
+  activarOpcionEliminar: boolean = true;
+  activarOpcionAgregar: boolean = true;
+  nombre:string="header";
 
   constructor(private datoService: DatoserviceService) { }
 
   ngOnInit(): void {
-    this.datoService.getDato().subscribe((Dato) => {
+    this.datoService.getDato(this.nombre).subscribe((Dato) => {
       this.banner = Dato;
     });
   }
@@ -24,7 +25,7 @@ export class HeaderComponent implements OnInit {
   guardarBanner(newBanner: Dato) {
     for (let elemento of this.banner) {
       if (elemento.id === newBanner.id) {
-        this.datoService.modifcarRegistro(newBanner).subscribe(() => {
+        this.datoService.modifcarRegistro(newBanner,this.nombre).subscribe(() => {
           this.banner = this.banner.filter(r => r.id !== newBanner.id);
           window.location.reload();
         })
@@ -35,11 +36,12 @@ export class HeaderComponent implements OnInit {
 
   eliminarRegistro(registro: Dato) {
     if (this.banner.length != 1) {
-      this.datoService.eliminarRegistro(registro).subscribe(
+      this.datoService.eliminarRegistro(registro,this.nombre).subscribe(
         () => {
           this.banner = this.banner.filter(r => r.id != registro.id);
         }
       )
+      window.location.reload();
     }
     else {
       alert("no se puede eliminar este registro: la seccion quedara vacia");
@@ -47,7 +49,7 @@ export class HeaderComponent implements OnInit {
   }
 
   agregarRegistro(registro:Dato) {
-    this.datoService.altaRegistro(registro).subscribe((registro) => {
+    this.datoService.altaRegistro(registro,this.nombre).subscribe((registro) => {
       this.banner.push(registro);
     })
   }
