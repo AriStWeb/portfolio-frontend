@@ -15,6 +15,7 @@ import { EditingFormComponent } from './components/editing-form/editing-form.com
 import { BtnEditarComponent} from './components/btn-editar/btn-editar.component';
 import { BtnEliminarComponent } from './components/btn-eliminar/btn-eliminar.component';
 import { BtnAgregarComponent } from './components/btn-agregar/btn-agregar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BtnAgregarComponent } from './components/btn-agregar/btn-agregar.compon
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -30,7 +30,7 @@ export class DatoserviceService {
   },
   {
     id:"project",
-    url:"http://localhost:5001/projec"
+    url:"http://localhost:5001/project"
   },
   {
     id:"footer",

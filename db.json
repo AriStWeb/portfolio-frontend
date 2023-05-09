@@ -17,74 +17,75 @@
   ],
   "works": [
     {
-      "img": "././assets/img/bannerImg.png",
-      "title": "esperiencia laboral 1",
-      "detail": "escuela secundaria colegio 14 como practica de finalizacion de carrera de pregrado"
+      "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-revision-codigo_114360-4289.jpg?w=740&t=st=1681014538~exp=1681015138~hmac=f4452fd10abb15d0960cc6c2b6ec0cf40797235e8f5567963aaaeae2c450bf6d",
+      "title": "experiencia laboral 1",
+      "detail": " blablabla",
+      "id": 1
     },
     {
+      "id": 2,
       "img": "././assets/img/bannerImg.png",
       "title": "esperiencia laboral 2",
       "detail": "domicilio particular"
-    },
-    {
-      "img": "././assets/img/bannerImg.png",
-      "title": "esperiencia laboral 3",
-      "detail": "practica de catedra internet serv y diseño"
     }
   ],
   "education": [
     {
+      "id": 1,
       " img": "././assets/img/bannerImg.png",
       "title": "titulo educacion 1",
       "detail": "pequeña reseña de formacion"
     },
     {
+      "id": 2,
       "img": "././assets/img/bannerImg.png",
       "title": "titulo educacion 2",
       "detail": "pequeña reseña de formacion"
+    },
+    {
+      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
+      "title": "titulo educación 3",
+      "detail": "curso de desarrollador web fullStack Jr",
+      "id": 4
     }
   ],
   "skill": [
     {
+      "id": 1,
       " img": "././assets/img/bannerImg.png",
       "title": "habilidad 1",
       "detail": "70%"
     },
     {
+      "id": 2,
       "img": "././assets/img/bannerImg.png",
       "title": "Habilidad 2",
       "detail": "80%"
     },
     {
+      "id": 3,
       " img": "././assets/img/bannerImg.png",
       "title": "habilidad 3",
       "detail": "70%"
     },
     {
-      "img": "././assets/img/bannerImg.png",
-      "title": "Habilidad 4",
-      "detail": "80%"
+      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
+      "title": "Desarrollador Fullstack Jr",
+      "detail": "Doy lo mejor",
+      "id": 4
     }
   ],
   "project": [
     {
-      " img": "././assets/img/bannerImg.png",
-      "title": "proyecto 1",
-      "detail": "detalles de proyecto"
-    },
-    {
+      "id": 2,
       "img": "././assets/img/bannerImg.png",
       "title": "proyecto 2",
       "detail": "detalles de proyecto"
     },
     {
+      "id": 3,
       " img": "././assets/img/bannerImg.png",
       "title": "proyecto 3",
-      "detail": "detalles de proyecto"
-    },
-    {
-      "img": "././assets/img/bannerImg.png",
-      "title": "proyecto 4",
       "detail": "detalles de proyecto"
     }
   ],

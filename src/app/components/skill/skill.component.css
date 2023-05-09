@@ -1,0 +1,24 @@
+.opciones-de-edicion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: solid aliceblue ;
+    margin-right: 10px;
+}
+.tarjeta-skill{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    width: 90%;
+}
+.skill-img{
+    width: 50px;
+    height: 50px;
+}
+.progress{
+    width: 96%;
+    margin: 2%;
+}

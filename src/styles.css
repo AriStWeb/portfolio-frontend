@@ -140,9 +140,11 @@ flex-wrap: wrap;
     margin: 5px 0%;
 }
 #fotoExp, #detallesExp{
-    height: 98%;
+    height: 95%;
 }
 #fotoExp{
+    display: flex;
+    justify-content: end;
     width: 20%;
     background-color: #999;
     margin: auto 7%;
@@ -165,36 +167,41 @@ flex-wrap: wrap;
 }
 /* EDUCACION*/
 .educacion{
-    display: flex;
-    flex-direction: column;
-    background-color: #132743;
-}
-.educacion div {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #132743;
+    color:white;
 }
-ul {
+.contenedor-educ {
+    width: auto;
+}
+.ul-content {
 list-style: none;
 display: flex;
 flex-direction: row;
-width: 100%;
+flex-wrap: wrap;
+width: auto;
 height: auto;
 justify-content: center;
 }
-li{
-    margin: auto 5px;
+.li-content{
+    width: 20%;
+    margin: 2%;
     text-align: center;
 }
-figure img {
-    width: 40%;
-    height: auto;
+.foto-educ{
+    width: 100px;
+    height: 100px;
 }
 
 /* HABILIDADES*/
 .contenedor-habilidades{
-    height: 400px;
+
+    height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 /* PROYECTO*/
@@ -219,7 +226,7 @@ footer{
     width: 100%;
     text-align: center;
 }
-.contacto-footer > div{
+#circulo{
     width: 50px;
     height: 50px;
     background-color: #999;

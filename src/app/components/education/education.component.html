@@ -1,65 +1,27 @@
-<!--Educacion-->
-<section class="educacion">
-    <div>
-      <h2>formacion</h2>
-    </div>
-    <div>
-      <ul>
-        <li>
+<!--EDUCACION-->
+<section>
+  <div>
+    <h2>formacion</h2>
+  </div>
+  <div class="educacion">
+    <div class="contenedor-educ">
+      <ul class="ul-content">
+        <li class="li-content" *ngFor="let formacion of education">
           <figure>
-            <img src="img/fotoPerfil.png" alt="">
+            <img class="foto-educ" [src]="formacion.img" alt="">
             <figcaption>
-              <h3>titulo</h3>
-              <p>detalles Lorem ipsum dolor sit.</p>
+              <h3>{{formacion.title}}</h3>
+              <p>{{formacion.detail}}</p>
             </figcaption>
           </figure>
-          <div class="controlEdit2">
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-pencil "></i></button>
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-trash-can"></i></button>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="img/fotoPerfil.png" alt="foto">
-            <figcaption>
-              <h3>titulo</h3>
-              <p>detalles Lorem ipsum dolor sit.</p>
-            </figcaption>
-          </figure>
-          <div class="controlEdit2">
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-pencil "></i></button>
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-trash-can"></i></button>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="img/fotoPerfil.png" alt="">
-            <figcaption>
-              <h3>titulo</h3>
-              <p>detalles Lorem ipsum dolor sit.</p>
-            </figcaption>
-          </figure>
-          <div class="controlEdit2">
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-pencil "></i></button>
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-trash-can"></i></button>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="img/fotoPerfil.png" alt="">
-            <figcaption>
-              <h3>titulo</h3>
-              <p>detalles Lorem ipsum dolor sit.</p>
-            </figcaption>
-          </figure>
-          <div class="controlEdit2">
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-pencil "></i></button>
-            <button style="background-color: aliceblue;"><i class="fa-solid fa-trash-can"></i></button>
+          <div class="opciones-de-edicion">
+            <app-btn-agregar *ngIf="activarOpcionAgregar" (nuevoDato)="agregarRegistro($event)"></app-btn-agregar>
+            <app-btn-editar class="m-3" [Dato]="formacion" (onNewDato)="guardarWorks($event)"></app-btn-editar>
+            <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="formacion" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
           </div>
         </li>
       </ul>
+    
     </div>
-    <div class="controlEdit">
-      <button style="background-color: aliceblue;"><i class="fa-solid fa-plus"></i></button>
-    </div>
-  </section>
+  </div>
+</section>

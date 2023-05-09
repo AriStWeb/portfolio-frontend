@@ -1,45 +1,24 @@
- <!--Experiencias Laborales -->
- <section id="experiencias">
-    <div>
-      <h2>experiencias</h2>
+<!--Experiencias Laborales -->
+<section id="experiencias">
+  <div>
+    <h2>experiencias</h2>
+  </div>
+  <div id="espacioExp" *ngFor="let work of works; let i=index">
+    <div id="fotoExp">
+      <img [src]="work.img" alt="" style="width: 150px;height: 150px;">
     </div>
-    <div id="espacioExp">
-      <div id="fotoExp">
-        <img src="" alt="">
+    <div id="detallesExp">
+      <div id="tituloExp">
+        <h3>{{work.title}}</h3>
       </div>
-      <div id="detallesExp">
-        <div id="tituloExp">
-          <h3>Experiencia Laboral 1</h3>
-        </div>
-        <div id="espacioResumenExp">
-          <p>detalles</p>
-        </div>
-      </div>
-    </div>
-    <div id="espacioExp">
-      <div id="fotoExp">
-        <img src="" alt="">
-      </div>
-      <div id="detallesExp">
-        <div id="tituloExp">
-          <h3>Experiencia Laboral 2</h3>
-        </div>
-        <div id="espacioResumenExp">
-          <p>detalles</p>
-        </div>
+      <div id="espacioResumenExp">
+        <p>{{work.detail}}</p>
       </div>
     </div>
-    <div id="espacioExp">
-      <div id="fotoExp">
-        <img src="" alt="">
-      </div>
-      <div id="detallesExp">
-        <div id="tituloExp">
-          <h3>Experiencia Laboral 3</h3>
-        </div>
-        <div id="espacioResumenExp">
-          <p>detalles</p>
-        </div>
-      </div>
+    <div class="menu-de-opciones">
+      <app-btn-agregar *ngIf="activarOpcionAgregar" (nuevoDato)="agregarRegistro($event)"></app-btn-agregar>
+      <app-btn-editar class="m-3" [Dato]="work" (onNewDato)="guardarWorks($event)"></app-btn-editar>
+      <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="work" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
     </div>
-  </section>
+  </div>
+</section>

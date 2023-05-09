@@ -1,0 +1,9 @@
+.opciones-de-edicion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: solid aliceblue ;
+    margin-right: 10px;
+}

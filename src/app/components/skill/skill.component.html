@@ -1,72 +1,24 @@
-  <!--habilidades-->
-  <section id="habilidades">
-    <div>
-      <h2>seccion de aptitudes y habilidades</h2>
-    </div>
-    <div class="container contenedor-habilidades ">
-      <div class="row justify-content-around w-100 h-25">
-        <div class="col-sm-3 bg-success">
-          <p class="text-center">habilidad 1</p>
-            <br>
-            <img src="" alt="h1">
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
-              70%
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 bg-info">
-          <p class="text-center">habilidad 2</p>
-            <br>
-            <img src="" alt="h2" >
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
-              70%
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 bg-warning">
-          <p class="text-center">habilidad 3</p>
-            <br>
-            <img src="" alt="h3" >
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
-              70%
-            </div>
+<!--habilidades-->
+<section id="habilidades">
+  <div>
+    <h2>seccion de aptitudes y habilidades</h2>
+  </div>
+  <div class="container contenedor-habilidades">
+    <div class="contenedor-skills" *ngFor="let skill of skills">
+      <div class="bg-success tarjeta-skill">
+        <p class="text-center">{{skill.title}}</p>
+        <img [src]="skill.img" alt="" class="skill-img">
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+            {{skill.detail}}
           </div>
         </div>
       </div>
-      <div class="row justify-content-around w-100 h-25">
-        <div class="col-sm-3 bg-success">
-           <p class="text-center">habilidad 4</p>
-            <br>
-            <img src="" alt="h4" >
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
-              70%
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 bg-info">
-           <p class="text-center">habilidad 5</p>
-            <br>
-            <img src="" alt="h5" >
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
-              70%
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 bg-warning">
-           <p class="text-center">habilidad 6</p>
-            <br>
-            <img src="" alt="h6" >
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
-              70%
-            </div>
-          </div>
-        </div>
+      <div class="opciones-de-edicion">
+        <app-btn-agregar *ngIf="activarOpcionAgregar" (nuevoDato)="agregarRegistro($event)"></app-btn-agregar>
+        <app-btn-editar class="m-3" [Dato]="skill" (onNewDato)="guardarWorks($event)"></app-btn-editar>
+        <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="skill" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
       </div>
     </div>
-  </section>
+  </div>
+</section>

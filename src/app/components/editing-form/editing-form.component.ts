@@ -20,6 +20,7 @@ onSubmit(){
     alert("Error no se ingreso ningun cambio!");
   }
   const newDato = { img : this.img, title: this.title, detail: this.detail, id : this.Dato?.id };
+  console.log(this.Dato);
   this.onEditDato.emit(newDato);
   
 }

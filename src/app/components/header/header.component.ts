@@ -10,8 +10,8 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
 export class HeaderComponent implements OnInit {
   banner: Dato[] = [];
   userLog: boolean = true; //pensado para log
-  activarOpcionEliminar: boolean = true;
-  activarOpcionAgregar: boolean = true;
+  activarOpcionEliminar: boolean = false;
+  activarOpcionAgregar: boolean = false;
   nombre:string="header";
 
   constructor(private datoService: DatoserviceService) { }

@@ -4,29 +4,21 @@
     <div>
       <h2>Proyectos</h2>
     </div>
-    <div class="conteiner cont-proyectos">
+    <div class="conteiner cont-proyectos"  >
       <!-- Carrusel -->
-      <div id="demo" class="carousel slide w-75 " data-bs-ride="carousel">
+      <div id="demo" class="carousel slide w-75 " data-bs-ride="carousel" >
 
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
-          <div class="carousel-item active text-info text-center">
-            <img src="img/fotoPerfil.png" alt="" class="d-block w-75" style="height: 250px;margin: auto;">
-            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit...</h3>
-            <p>Quo, harum autem? Eaque reiciendis nostrum sequi cupiditate, magni eius ipsam laudantium
-              nulla similique, fugit quia sit atque consectetur? </p>
-          </div>
-          <div class="carousel-item text-info text-center">
-            <img src="img/fotoPerfil.png" alt="" class="d-block w-75" style="height: 250px;margin: auto;">
-            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit...</h3>
-            <p>Quo, harum autem? Eaque reiciendis nostrum sequi cupiditate, magni eius ipsam laudantium
-              nulla similique, fugit quia sit atque consectetur? </p>
-          </div>
-          <div class="carousel-item text-info text-center">
-            <img src="img/fotoPerfil.png" alt="" class="d-block w-75" style="height: 250px;margin: auto;">
-            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit...</h3>
-            <p>Quo, harum autem? Eaque reiciendis nostrum sequi cupiditate, magni eius ipsam laudantium
-              nulla similique, fugit quia sit atque consectetur? </p>
+          <div class="carousel-item active text-info text-center" *ngFor="let project of projects">
+            <img [src]="project.img" alt="" class="d-block w-75" style="height: 250px;margin: auto;">
+            <h3>{{project.title}}</h3>
+            <p>{{project.detail}} </p>
+            <div class="opciones-de-edicion">
+              <app-btn-agregar *ngIf="activarOpcionAgregar" (nuevoDato)="agregarRegistro($event)"></app-btn-agregar>
+              <app-btn-editar class="m-3" [Dato]="project" (onNewDato)="guardarWorks($event)"></app-btn-editar>
+              <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="project" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
+            </div>
           </div>
         </div>
 
