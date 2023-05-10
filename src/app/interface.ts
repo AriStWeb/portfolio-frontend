@@ -3,7 +3,7 @@ export interface Dato{
     img:string;
     title:string;
     detail:string;
-    nombre?:string;
+    nombreApellido?:string;
     logo?:string;
 }
 export interface Banner{

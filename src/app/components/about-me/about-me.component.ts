@@ -10,10 +10,6 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
 export class AboutMeComponent implements OnInit {
 
   aboutMe: Dato[] = [];
-  userLog: boolean = true; //pensado para log
-  propietario:string = "Sotomayor Ari Soledad";
-  activarOpcionEliminar: boolean = true;
-  activarOpcionAgregar: boolean = true;
   nombre:string="aboutMe";
 
   constructor(private datoService: DatoserviceService) { }

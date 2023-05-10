@@ -13,7 +13,7 @@
           <h3>{{sobreMi.title}}</h3>
         </div>
         <div class=" col-3  mt-4 h-50 ">
-          <h2>{{propietario}}</h2>
+          <h2>{{sobreMi.nombreApellido}}</h2>
         </div>
         <div class=" col-8 mt-4 ">
           <p>{{sobreMi.detail}}</p>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="opcionesEdit">
-    <app-btn-editar class="m-3" [Dato]="sobreMi" (onNewDato)=" guardarSobreMi($event)"></app-btn-editar>
+    <app-form-about-me class="m-3" [Dato]="sobreMi" (onEditDato)=" guardarSobreMi($event)"></app-form-about-me>
     </div>
   </section>
   

@@ -1,0 +1,24 @@
+<button class="btn btn-primary" (click)="desplegarEdicion()">Editar</button>
+
+<form *ngIf="editar" class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="nombreApellido">Apellido Nombre </label>
+        <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Agregar Detalle" [(ngModel)]="nombreApellido">
+    </div>
+    <div >
+        <label for="urlFotoPerfil">FotoDePerfil</label>
+        <input type="text" name="urlFotoPerfil" id="urlFotoPerfil" placeholder="Ingresa Url de Imagen" [(ngModel)]="urlFotoPerfil">
+    </div>
+    <div >
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo" placeholder="Agregar Titulo" [(ngModel)]="titulo">
+    </div>
+    <div>
+        <label for="sobreMi">Mas Sobre Mi</label>
+        <input type="text" name="sobreMi" id="sobreMi" placeholder="Aqui puedes escribir sobre ti" [(ngModel)]="sobreMi">
+    </div>
+    <div>
+        <input type="submit" value="Guardar Cambios" >
+        <input type="reset" value="Limpiar Campos" >
+    </div>
+</form>
