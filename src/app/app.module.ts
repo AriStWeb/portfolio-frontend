@@ -18,6 +18,8 @@ import { BtnAgregarComponent } from './components/btn-agregar/btn-agregar.compon
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormHeaderComponent } from './components/form-header/form-header.component';
 import { FormAboutMeComponent } from './components/form-about-me/form-about-me.component';
+import { MenuExpLabComponent } from './components/menu-exp-lab/menu-exp-lab.component';
+import { FormWorkComponent } from './components/form-work/form-work.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { FormAboutMeComponent } from './components/form-about-me/form-about-me.c
     BtnEliminarComponent,
     BtnAgregarComponent,
     FormHeaderComponent,
-    FormAboutMeComponent
+    FormAboutMeComponent,
+    MenuExpLabComponent,
+    FormWorkComponent
     ],
   imports: [
     BrowserModule,

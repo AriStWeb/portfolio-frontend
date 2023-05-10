@@ -1,23 +1,26 @@
 <footer id="contacto">
   <h2>Contacto</h2>
-  <div class="container">
+  <div class="container" *ngFor="let pie of footer">
     <div class="row">
       <div class="container my-1 text-light">
         <div class="row">
           <div class="col-sm-2 mb-1">
-            <h3>enlaces</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <h4>Mapa de sitio</h4>
+            <ul>
+              <li><a href="#fotoPerfil">Mas Sobre Mi</a></li>
+              <li><a href=#experiencias>Experiencias</a></li>
+              <li><a href=#proyectos>Proyectos</a></li>
+            </ul>
           </div>
           <div class="col"></div>
           <div class="col-sm-5 mb-1 contacto-footer">
-            <div></div>
-            <a href="" id="circulo"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="" id="circulo"></a>
-            <a href="" id="circulo"></a>
+            <img [src]="pie.img" alt="" style="width: 100px;height: 100px;">
+            <a [href]="pie.title">Enlace a facebook</a>
+            <a [href]="pie.detail">Enlace a Instagram</a>
           </div>
           <div class="col"></div>
           <div class="col-sm-2 mb-1">
-            <h3>info adic</h3>
+            <h4>infomacion adicional</h4>
             <p></p>
           </div>
         </div>

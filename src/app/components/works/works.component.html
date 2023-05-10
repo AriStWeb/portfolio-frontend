@@ -16,9 +16,7 @@
       </div>
     </div>
     <div class="menu-de-opciones">
-      <app-btn-agregar *ngIf="activarOpcionAgregar" (nuevoDato)="agregarRegistro($event)"></app-btn-agregar>
-      <app-btn-editar class="m-3" [Dato]="work" (onNewDato)="guardarWorks($event)"></app-btn-editar>
-      <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="work" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
+      <app-menu-exp-lab [Dato]="work" (edit)="guardarWorks($event)" (nvoDato)="agregarRegistro($event)"  (borrarDato)="eliminarRegistro($event)"></app-menu-exp-lab>
     </div>
   </div>
 </section>

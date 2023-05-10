@@ -1,0 +1,18 @@
+<form class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
+    <div >
+        <label for="urlImgExpLab">Imagen</label>
+        <input type="text" name="urlImgExpLab" id="img" placeholder="Ingresa Url de Imagen" [(ngModel)]="urlImgExpLab">
+    </div>
+    <div >
+        <label for="nombreExpLab">Titulo</label>
+        <input type="text" name="nombreExpLab" id="title" placeholder="Agregar Titulo" [(ngModel)]="nombreExpLab">
+    </div>
+    <div>
+        <label for="detalleExpLab">Detalles</label>
+        <input type="text" name="detalleExpLab" id="detail" placeholder="Agregar Detalle" [(ngModel)]="detalleExpLab">
+    </div>
+    <div>
+        <input type="submit" value="Guardar Cambios" >
+        <input type="reset" value="Limpiar Campos" >
+    </div>
+</form>

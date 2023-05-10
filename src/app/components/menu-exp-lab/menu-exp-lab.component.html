@@ -1,0 +1,12 @@
+<div class="menu">
+<button (click)="desplegarEditar()" class="btn btn-primary m-1">Editar</button>
+<app-form-work *ngIf="editar" (anDato)="editarDato($event)" [Dato]="Dato" ></app-form-work>
+
+<button (click)="desplegarAgregar()" class="btn btn-primary m-1">Agregar</button>
+<app-form-work *ngIf="agregar" (anDato)="agregarDato($event)" [Dato]="Dato"></app-form-work>
+
+<button (click)="eliminarDato()" class="btn btn-primary m-1">Eliminar</button>
+</div>
+
+
+

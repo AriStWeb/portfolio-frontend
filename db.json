@@ -19,28 +19,22 @@
     {
       "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-revision-codigo_114360-4289.jpg?w=740&t=st=1681014538~exp=1681015138~hmac=f4452fd10abb15d0960cc6c2b6ec0cf40797235e8f5567963aaaeae2c450bf6d",
       "title": "experiencia laboral 1",
-      "detail": " blablabla",
+      "detail": "hola",
       "id": 1
-    },
-    {
-      "id": 2,
-      "img": "././assets/img/bannerImg.png",
-      "title": "esperiencia laboral 2",
-      "detail": "domicilio particular"
     }
   ],
   "education": [
     {
-      "id": 1,
-      " img": "././assets/img/bannerImg.png",
+      "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-revision-codigo_114360-4289.jpg?w=740&t=st=1681014538~exp=1681015138~hmac=f4452fd10abb15d0960cc6c2b6ec0cf40797235e8f5567963aaaeae2c450bf6d",
       "title": "titulo educacion 1",
-      "detail": "pequeña reseña de formacion"
+      "detail": "pequeña reseña de formacion",
+      "id": 1
     },
     {
-      "id": 2,
-      "img": "././assets/img/bannerImg.png",
+      "img": "https://img.freepik.com/vector-gratis/computadora-portatil-icono-isometrico-codigo-programa-desarrollo-software-aplicaciones-programacion-neon-oscuro_39422-971.jpg?w=740&t=st=1683721976~exp=1683722576~hmac=7ef649a3164d1c928c3f5e5c78e6fad24d5b3157abc007c94cf2e5aea4116fa8",
       "title": "titulo educacion 2",
-      "detail": "pequeña reseña de formacion"
+      "detail": "pequeña reseña de formacion",
+      "id": 2
     },
     {
       "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
@@ -91,24 +85,10 @@
   ],
   "footer": [
     {
-      " img": "././assets/img/bannerImg.png",
-      "title": "enlace 1",
-      "detail": ""
-    },
-    {
-      "img": "././assets/img/bannerImg.png",
-      "title": "enlace 2",
-      "detail": ""
-    },
-    {
-      " img": "././assets/img/bannerImg.png",
-      "title": "enlace 3",
-      "detail": ""
-    },
-    {
-      "img": "././assets/img/bannerImg.png",
-      "title": "enlace 4",
-      "detail": ""
+      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
+      "title": "facebook",
+      "detail": "instagram"
     }
+   
   ]
 }

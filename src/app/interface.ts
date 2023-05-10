@@ -6,11 +6,7 @@ export interface Dato{
     nombreApellido?:string;
     logo?:string;
 }
-export interface Banner{
-    urlImgBanner:string;
-    tituloBanner:string;
-    detalleBanner:string;
-}
+
 export interface DB {
     header:    Dato[];
     aboutMe:   Dato[];

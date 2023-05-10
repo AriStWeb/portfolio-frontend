@@ -50,6 +50,8 @@ export class WorksComponent {
   }
 
   agregarRegistro(registro:Dato) {
+    console.log(registro);
+    registro.id = (this.works.length) + 1;
     this.datoService.altaRegistro(registro,this.nombre).subscribe((registro) => {
       this.works.push(registro);
     })
