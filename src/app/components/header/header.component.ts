@@ -9,9 +9,6 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
 })
 export class HeaderComponent implements OnInit {
   banner: Dato[] = [];
-  userLog: boolean = true; //pensado para log
-  activarOpcionEliminar: boolean = false;
-  activarOpcionAgregar: boolean = false;
   nombre:string="header";
 
   constructor(private datoService: DatoserviceService) { }
@@ -31,30 +28,5 @@ export class HeaderComponent implements OnInit {
         })
       }
     }
-
   }
-
-  eliminarRegistro(registro: Dato) {
-    if (this.banner.length != 1) {
-      this.datoService.eliminarRegistro(registro,this.nombre).subscribe(
-        () => {
-          this.banner = this.banner.filter(r => r.id != registro.id);
-        }
-      )
-      window.location.reload();
-    }
-    else {
-      alert("no se puede eliminar este registro: la seccion quedara vacia");
-    }
-  }
-
-  agregarRegistro(registro:Dato) {
-    this.datoService.altaRegistro(registro,this.nombre).subscribe((registro) => {
-      this.banner.push(registro);
-    })
-  }
-
-
-
-
 }

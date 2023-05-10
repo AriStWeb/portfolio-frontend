@@ -1,0 +1,19 @@
+<button class="btn btn-primary" (click)="desplegar()">Editar</button>
+<form *ngIf="editarBanner" class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
+    <div >
+        <label for="urlImgBanner">Imagen</label>
+        <input type="text" name="img" id="urlImgBanner" placeholder="Ingresa Url de Imagen" [(ngModel)]="urlImgBanner">
+    </div>
+    <div >
+        <label for="tituloBanner">Titulo</label>
+        <input type="text" name="title" id="tituloBanner" placeholder="Agregar Titulo" [(ngModel)]="tituloBanner">
+    </div>
+    <div>
+        <label for="fraseBanner">Detalles</label>
+        <input type="detail" name="detail" id="fraseBanner" placeholder="Agregar Frase o Banner" [(ngModel)]="fraseBanner">
+    </div>
+    <div>
+        <input type="submit" value="Guardar Cambios" >
+        <input type="reset" value="Limpiar Campos" >
+    </div>
+</form>
