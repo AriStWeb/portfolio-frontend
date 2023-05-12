@@ -1,15 +1,27 @@
 <form class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
     <div >
-        <label for="img">Imagen</label>
-        <input type="text" name="img" id="img" placeholder="Ingresa Url de Imagen" [(ngModel)]="img">
+        <label for="imgEduc">Imagen</label>
+        <input type="text" name="imgEduc"  placeholder="Ingresa Url de Imagen" [(ngModel)]="imgEduc">
     </div>
     <div >
-        <label for="title">Titulo</label>
-        <input type="text" name="title" id="title" placeholder="Agregar Titulo" [(ngModel)]="title">
+        <label for="nombre_educ">Titulo</label>
+        <input type="text" name="nombre_educ" placeholder="Desiganar educacion" [(ngModel)]="nombre_educ">
     </div>
     <div>
-        <label for="detail">Detalles</label>
-        <input type="detail" name="detail" id="detail" placeholder="Agregar Detalle" [(ngModel)]="detail">
+        <label for="descripcionEduc">Detalles</label>
+        <input type="text" name="descripcionEduc" id="detail" placeholder="Agregar Detalle de educacion" [(ngModel)]="descripcionEduc">
+    </div>
+    <div >
+        <label for="anioInicioEduc">Año de inicio</label>
+        <input type="number" name="anioInicioEduc" placeholder="Año de inicio" [(ngModel)]="anioInicioEduc">
+    </div>
+    <div >
+        <label for="anioFinEduc">Año de finalizaciono</label>
+        <input type="number" name="anioFinEduc" placeholder="Año finalizacion" [(ngModel)]="anioFinEduc">
+    </div>
+    <div >
+        <label for="nombreOrgEduc">Nombre de la institucion</label>
+        <input type="text" name="nombreOrgEducc" placeholder="institucion" [(ngModel)]="nombreOrgEduc">
     </div>
     <div>
         <input type="submit" value="Guardar Cambios" >

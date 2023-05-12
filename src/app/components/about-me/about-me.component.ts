@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { Dato } from 'src/app/interface';
-import { DatoserviceService } from 'src/app/service/datoservice.service';
+import { Persona } from 'src/app/interface';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,17 +9,17 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
 })
 export class AboutMeComponent implements OnInit {
 
-  aboutMe: Dato[] = [];
-  nombre:string="aboutMe";
+  aboutMe:Persona[] = [];
+  nombre:string="persona";
 
-  constructor(private datoService: DatoserviceService) { }
+  constructor(private datoService: PersonaService) { }
 
   ngOnInit(): void {
-    this.datoService.getDato(this.nombre).subscribe((Dato) => {
+    this.datoService.getDato().subscribe((Dato) => {
       this.aboutMe = Dato;
     });
   }
-  guardarSobreMi(newAboutMe: Dato) {
+  guardarSobreMi(newAboutMe: Persona) {
     for (let elemento of this.aboutMe) {
       if (elemento.id === newAboutMe.id) {
         this.datoService.modifcarRegistro(newAboutMe,this.nombre).subscribe(() => {

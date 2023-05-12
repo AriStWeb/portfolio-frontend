@@ -1,6 +1,6 @@
 import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Dato } from 'src/app/interface';
+import { ExperienciaLaboral } from 'src/app/interface';
 
 @Component({
   selector: 'app-menu-exp-lab',
@@ -9,10 +9,17 @@ import { Dato } from 'src/app/interface';
 })
 
 export class MenuExpLabComponent {
-  @Input() Dato?: Dato;
-  @Output() edit: EventEmitter<Dato> = new EventEmitter();
-  @Output() nvoDato: EventEmitter<Dato> = new EventEmitter();
-  @Output() borrarDato: EventEmitter<Dato> = new EventEmitter();
+  @Input() Dato: ExperienciaLaboral={ id : 0,
+                                      nombreExpLab : "",
+                                      descripcionExpLab : "",
+                                      anioInicioExpLab :  0,
+                                      anioFinExpLab : 0,
+                                      nombreLugarExpLab : "",
+                                      imgExpLab : ""
+                                      };
+  @Output() edit: EventEmitter<ExperienciaLaboral> = new EventEmitter();
+  @Output() nvoDato: EventEmitter<ExperienciaLaboral> = new EventEmitter();
+  @Output() borrarDato: EventEmitter<ExperienciaLaboral> = new EventEmitter();
   editar: boolean = false;
   agregar: boolean = false;
 
@@ -26,11 +33,11 @@ export class MenuExpLabComponent {
     this.agregar = !this.agregar;
   }
 
-  editarDato(editData: Dato) {
+  editarDato(editData: ExperienciaLaboral) {
     this.edit.emit(editData);
   }
 
-  agregarDato(nvo: Dato) {
+  agregarDato(nvo: ExperienciaLaboral) {
     this.nvoDato.emit(nvo);
     console.log(nvo);
   }

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Dato } from 'src/app/interface';
-import { DatoserviceService } from 'src/app/service/datoservice.service';
+import { Educacion } from 'src/app/interface';
+
 
 @Component({
   selector: 'app-btn-eliminar',
@@ -8,13 +8,20 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
   styleUrls: ['./btn-eliminar.component.css']
 })
 export class BtnEliminarComponent {
-  @Output() eliminadorDeRegistro:EventEmitter<Dato> = new EventEmitter(); 
-  @Input() Dato:any;
+  @Output() eliminadorDeRegistro:EventEmitter<Educacion> = new EventEmitter(); 
+  @Input() Dato:Educacion={ id: 0,
+                            nombre_educ: "",
+                            descripcionEduc: "",
+                            anioInicioEduc: 0,
+                            anioFinEduc:0,
+                            nombreOrgEduc: "",
+                            imgEduc: ""
+                          };
 
   constructor(){
 
   }
-eliminarRegistro(Dato:Dato){
+eliminarRegistro(Dato:Educacion){
   Dato =this.Dato;
   this.eliminadorDeRegistro.emit(Dato);
 }

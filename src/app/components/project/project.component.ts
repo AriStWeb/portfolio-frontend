@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Dato } from 'src/app/interface';
+import { Proyecto } from 'src/app/interface';
 import { DatoserviceService } from 'src/app/service/datoservice.service';
+import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
   selector: 'app-project',
@@ -8,36 +9,36 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent {
- projects: Dato[] = [];
+ projects: Proyecto[] = [];
   userLog: boolean = true; //pensado para log
   activarOpcionEliminar: boolean = true;
   activarOpcionAgregar: boolean = true;
   activarOpcioneditar: boolean = true;
 
-  nombre:string="project";
+  nombre:string="proyecto";
 
-  constructor(private datoService: DatoserviceService) { }
+  constructor(private datoService: ProyectoService) { }
 
   ngOnInit(): void {
-    this.datoService.getDato(this.nombre).subscribe((Dato) => {
+    this.datoService.getDato().subscribe((Dato) => {
       this.projects = Dato;
       console.log(this.projects);
     });
   }
 
-  guardarWorks(dataEdit:Dato){
+  guardarWorks(dataEdit:Proyecto){
     for (let elemento of this.projects) {
       if (elemento.id === dataEdit.id) {
-        this.datoService.modifcarRegistro(dataEdit,this.nombre).subscribe(() => {
+        this.datoService.modifcarRegistro(dataEdit).subscribe(() => {
           this.projects = this.projects.filter(r => r.id !== dataEdit.id);
           window.location.reload();
         })
       }
     }
   }
-  eliminarRegistro(registro: Dato) {
+  eliminarRegistro(registro: Proyecto) {
     if (this.projects.length != 1) {
-      this.datoService.eliminarRegistro(registro,this.nombre).subscribe(
+      this.datoService.eliminarRegistro(registro).subscribe(
         () => {
           this.projects = this.projects.filter(r => r.id != registro.id);
         }
@@ -49,8 +50,8 @@ export class ProjectComponent {
     }
   }
 
-  agregarRegistro(registro:Dato) {
-    this.datoService.altaRegistro(registro,this.nombre).subscribe((registro) => {
+  agregarRegistro(registro:Proyecto) {
+    this.datoService.altaRegistro(registro).subscribe((registro) => {
       this.projects.push(registro);
     })
   }

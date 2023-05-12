@@ -4,15 +4,16 @@
     <h2>experiencias</h2>
   </div>
   <div id="espacioExp" *ngFor="let work of works; let i=index">
-    <div id="fotoExp">
-      <img [src]="work.img" alt="" style="width: 150px;height: 150px;">
+    <div id="fotoExp"class="m-3">
+      <img [src]="work.imgExpLab" alt="" style="width: 150px;height: 150px;">
     </div>
     <div id="detallesExp">
       <div id="tituloExp">
-        <h3>{{work.title}}</h3>
+        <h3>{{work.id}}-{{work.nombreExpLab}}</h3>
       </div>
       <div id="espacioResumenExp">
-        <p>{{work.detail}}</p>
+        <p>{{work.descripcionExpLab}} 
+          <br>Lugar:{{work.nombreLugarExpLab}} - Duracion: {{work.anioInicioExpLab}} - {{work.anioInicioExpLab}}-</p>
       </div>
     </div>
     <div class="menu-de-opciones">

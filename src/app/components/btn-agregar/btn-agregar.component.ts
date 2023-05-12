@@ -1,5 +1,5 @@
 import { Component,Output,EventEmitter } from '@angular/core';
-import { Dato } from 'src/app/interface';
+import { Educacion} from 'src/app/interface';
 
 @Component({
   selector: 'app-btn-agregar',
@@ -8,14 +8,14 @@ import { Dato } from 'src/app/interface';
 })
 export class BtnAgregarComponent {
   activarAgregarDato:boolean=false;
-  @Output() nuevoDato:EventEmitter<Dato> = new EventEmitter();
+  @Output() nuevoDato:EventEmitter<Educacion> = new EventEmitter();
 
 
 abrirVentana(){
   this.activarAgregarDato = !this.activarAgregarDato;
 }
 
-editarDato(newDato:Dato){
+editarDato(newDato:Educacion){
   this.nuevoDato.emit(newDato);
 }
 }

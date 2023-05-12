@@ -8,10 +8,13 @@
       <ul class="ul-content">
         <li class="li-content" *ngFor="let formacion of education">
           <figure>
-            <img class="foto-educ" [src]="formacion.img" alt="">
+            <img class="foto-educ" [src]="formacion.imgEduc" alt="">
             <figcaption>
-              <h3>{{formacion.title}}</h3>
-              <p>{{formacion.detail}}</p>
+              <h3>{{formacion.nombre_educ}}</h3>
+              <p>{{formacion.descripcionEduc}}
+                <br>
+                {{formacion.nombreOrgEduc}} - {{formacion.anioInicioEduc}} - {{formacion.anioFinEduc}}
+              </p>
             </figcaption>
           </figure>
           <div class="opciones-de-edicion">

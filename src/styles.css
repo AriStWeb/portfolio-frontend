@@ -138,6 +138,7 @@ flex-wrap: wrap;
     height: 25%;
     justify-content: space-around;
     margin: 5px 0%;
+    color: white;
 }
 #fotoExp, #detallesExp{
     height: 95%;
@@ -146,7 +147,6 @@ flex-wrap: wrap;
     display: flex;
     justify-content: end;
     width: 20%;
-    background-color: #999;
     margin: auto 7%;
 }
 #detallesExp {
@@ -157,13 +157,11 @@ flex-wrap: wrap;
 #tituloExp{
     height: 25%;
     width: 50%;
-    background-color: #999;
     margin-bottom: 1%;
 }
 #espacioResumenExp{
     height: 79%;
     width: 85%;
-    background-color: #999;
 }
 /* EDUCACION*/
 .educacion{
@@ -202,7 +200,7 @@ justify-content: center;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 /* PROYECTO*/
@@ -213,8 +211,9 @@ justify-content: center;
     align-items: center;
 }
 /* FOOTER*/
+
 footer{
-    height: 200px;
+    height: auto;
     background-color: #132743;
 }
 .contacto-footer{

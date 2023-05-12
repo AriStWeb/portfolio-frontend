@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Dato } from 'src/app/interface';
-import { DatoserviceService } from 'src/app/service/datoservice.service';
+import { Tecnologia } from 'src/app/interface';
+import { TecnologiaService } from 'src/app/service/tecnologia.service';
 
 @Component({
   selector: 'app-skill',
@@ -8,15 +8,15 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
   styleUrls: ['./skill.component.css']
 })
 export class SkillComponent {
-  skills: Dato[] = [];
+  skills: Tecnologia[] = [];
   userLog: boolean = true; //pensado para log
   activarOpcionEliminar: boolean = true;
   activarOpcionAgregar: boolean = true;
   activarOpcioneditar: boolean = true;
 
-  nombre:string="skill";
+  nombre:string="habilidad";
 
-  constructor(private datoService: DatoserviceService) { }
+  constructor(private datoService: TecnologiaService) { }
 
   ngOnInit(): void {
     this.datoService.getDato(this.nombre).subscribe((Dato) => {
@@ -24,19 +24,19 @@ export class SkillComponent {
     });
   }
 
-  guardarWorks(dataEdit:Dato){
+  guardarWorks(dataEdit:Tecnologia){
     for (let elemento of this.skills) {
       if (elemento.id === dataEdit.id) {
-        this.datoService.modifcarRegistro(dataEdit,this.nombre).subscribe(() => {
+        this.datoService.modifcarRegistro(dataEdit).subscribe(() => {
           this.skills = this.skills.filter(r => r.id !== dataEdit.id);
           window.location.reload();
         })
       }
     }
   }
-  eliminarRegistro(registro: Dato) {
+  eliminarRegistro(registro: Tecnologia) {
     if (this.skills.length != 1) {
-      this.datoService.eliminarRegistro(registro,this.nombre).subscribe(
+      this.datoService.eliminarRegistro(registro).subscribe(
         () => {
           this.skills = this.skills.filter(r => r.id != registro.id);
         }
@@ -48,8 +48,8 @@ export class SkillComponent {
     }
   }
 
-  agregarRegistro(registro:Dato) {
-    this.datoService.altaRegistro(registro,this.nombre).subscribe((registro) => {
+  agregarRegistro(registro:Tecnologia) {
+    this.datoService.altaRegistro(registro).subscribe((registro) => {
       this.skills.push(registro);
     })
   }

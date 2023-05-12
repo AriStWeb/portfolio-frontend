@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Dato } from 'src/app/interface';
+import { Educacion } from 'src/app/interface';
 import { DatoserviceService } from 'src/app/service/datoservice.service';
+import { EducacionService } from 'src/app/service/educacion.service';
 
 @Component({
   selector: 'app-education',
@@ -8,35 +9,36 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-  education: Dato[] = [];
+  education: Educacion[] = [];
   userLog: boolean = true; //pensado para log
   activarOpcionEliminar: boolean = true;
   activarOpcionAgregar: boolean = true;
   activarOpcioneditar: boolean = true;
 
-  nombre:string="education";
+  nombre:string="educacion";
 
-  constructor(private datoService: DatoserviceService) { }
+  constructor(private datoService: EducacionService) { }
 
   ngOnInit(): void {
-    this.datoService.getDato(this.nombre).subscribe((Dato) => {
+    this.datoService.getDato().subscribe((Dato) => {
       this.education = Dato;
     });
   }
 
-  guardarWorks(dataEdit:Dato){
+  guardarWorks(dataEdit:Educacion){
     for (let elemento of this.education) {
       if (elemento.id === dataEdit.id) {
-        this.datoService.modifcarRegistro(dataEdit,this.nombre).subscribe(() => {
+        this.datoService.modifcarRegistro(dataEdit).subscribe(() => {
           this.education = this.education.filter(r => r.id !== dataEdit.id);
           window.location.reload();
         })
       }
     }
   }
-  eliminarRegistro(registro: Dato) {
+  eliminarRegistro(registro: Educacion) {
+    console.log (registro);
     if (this.education.length != 1) {
-      this.datoService.eliminarRegistro(registro,this.nombre).subscribe(
+      this.datoService.eliminarRegistro(registro).subscribe(
         () => {
           this.education = this.education.filter(r => r.id != registro.id);
         }
@@ -48,8 +50,8 @@ export class EducationComponent {
     }
   }
 
-  agregarRegistro(registro:Dato) {
-    this.datoService.altaRegistro(registro,this.nombre).subscribe((registro) => {
+  agregarRegistro(registro:Educacion) {
+    this.datoService.altaRegistro(registro).subscribe((registro) => {
       this.education.push(registro);
     })
   }

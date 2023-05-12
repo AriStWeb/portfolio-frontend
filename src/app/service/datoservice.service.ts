@@ -7,34 +7,11 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class DatoserviceService {
-  private urlApiHeader="http://localhost:5001/header";
-  private urlApi= [{
-    id:"header",
-    url:"http://localhost:5001/header"
-  },
+  private urlApiHeader="http://localhost:8080";
+  private urlApi= [
   {
-    id:"aboutMe",
-    url:"http://localhost:5001/aboutMe"
-  },
-  {
-    id:"works",
-    url:"http://localhost:5001/works"
-  },
-  {
-    id:"education",
-    url:"http://localhost:5001/education"
-  },
-  {
-    id:"skill",
-    url:"http://localhost:5001/skill"
-  },
-  {
-    id:"project",
-    url:"http://localhost:5001/project"
-  },
-  {
-    id:"footer",
-    url:"http://localhost:5001/footer"
+    id:"proyecto",
+    url:"http://localhost:8080/proyecto"
   }
 ]
 
@@ -47,20 +24,20 @@ export class DatoserviceService {
     }
   }
   getDato(component:string):Observable<Dato[]> {
-    return this.http.get<Dato[]>(this.urlApiComponent(component));
+    return this.http.get<Dato[]>(this.urlApiHeader+"/"+component+"/ver");
   }
 
   eliminarRegistro(Dato:Dato,component:string):Observable<Dato>{
-    const url = `${this.urlApiComponent(component)}/${Dato.id}`;
+    const url = `${this.urlApiComponent(component)}/"eliminar"/${Dato.id}`;
     return this.http.delete<Dato>(url);
   }
 
   modifcarRegistro(dato:Dato,component:string): Observable<Dato> {
-    const url = `${this.urlApiComponent(component)}/${dato.id}`
+    const url = `${this.urlApiComponent(component)}/"editar"/${dato.id}`
     return this.http.put<Dato>(url, dato);
   }
 
   altaRegistro(dato: Dato,component:string): Observable<Dato> {
-    return this.http.post<Dato>(this.urlApiComponent(component), dato);
+    return this.http.post<Dato>(this.urlApiComponent(component)+"/agregar", dato);
   }
 }

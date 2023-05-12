@@ -1,7 +1,7 @@
 <form class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
     <div >
         <label for="urlImgExpLab">Imagen</label>
-        <input type="text" name="urlImgExpLab" id="img" placeholder="Ingresa Url de Imagen" [(ngModel)]="urlImgExpLab">
+        <input type="text" name="urlImgExpLab" id="img" placeholder="Ingresa Url de Imagen" [(ngModel)]="imgExpLab">
     </div>
     <div >
         <label for="nombreExpLab">Titulo</label>
@@ -9,7 +9,19 @@
     </div>
     <div>
         <label for="detalleExpLab">Detalles</label>
-        <input type="text" name="detalleExpLab" id="detail" placeholder="Agregar Detalle" [(ngModel)]="detalleExpLab">
+        <input type="text" name="detalleExpLab" id="detail" placeholder="Agregar Detalle" [(ngModel)]="descripcionExpLab">
+    </div>
+    <div>
+        <label for="anioInicioExpLab">Año de inicio</label>
+        <input type="text" name="anioInicioExpLab" placeholder="Año de inicio" [(ngModel)]="anioInicioExpLab">
+    </div>
+    <div>
+        <label for="anioFinExpLab">Año de finalizacion </label>
+        <input type="text" name="anioFinExpLab" placeholder="Año finalizacion" [(ngModel)]="anioFinExpLab">
+    </div>
+    <div>
+        <label for=" nombreLugarExpLab">Lugar </label>
+        <input type="text" name=" nombreLugarExpLab" placeholder="Lugar" [(ngModel)]="nombreLugarExpLab">
     </div>
     <div>
         <input type="submit" value="Guardar Cambios" >

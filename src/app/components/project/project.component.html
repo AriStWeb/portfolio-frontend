@@ -11,14 +11,9 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active text-info text-center" *ngFor="let project of projects">
-            <img [src]="project.img" alt="" class="d-block w-75" style="height: 250px;margin: auto;">
-            <h3>{{project.title}}</h3>
-            <p>{{project.detail}} </p>
-            <div class="opciones-de-edicion">
-              <app-btn-agregar *ngIf="activarOpcionAgregar" (nuevoDato)="agregarRegistro($event)"></app-btn-agregar>
-              <app-btn-editar class="m-3" [Dato]="project" (onNewDato)="guardarWorks($event)"></app-btn-editar>
-              <app-btn-eliminar *ngIf="activarOpcionEliminar" [Dato]="project" (eliminadorDeRegistro)="eliminarRegistro($event)"></app-btn-eliminar>
-            </div>
+            <img [src]="project.urlImgProyecto" alt="" class="d-block w-75" style="height: 250px;margin: auto;">
+            <h3>{{project.nombreProyecto}}</h3>
+            <p>{{project.descripcionProyecto}} </p>
           </div>
         </div>
 

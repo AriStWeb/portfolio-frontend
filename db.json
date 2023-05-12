@@ -9,86 +9,101 @@
   ],
   "aboutMe": [
     {
-      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
-      "title": "Desarrollador Fullstack Jr",
+      "nombreApellido": "Sotomayor Ari ",
+      "img": "https://scontent.firj1-1.fna.fbcdn.net/v/t1.6435-9/88370908_3130703306948590_1291736432456499200_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEkl57g5eNs6ooc4cW8xv72JKJjQaaHj5UkomNBpoePlTwIvrM9c0r4Jc27a62hivaZe79HmrKXowrMmOKnLcfm&_nc_ohc=mU9Klrs_C98AX-8oWDu&_nc_ht=scontent.firj1-1.fna&oh=00_AfBi7-MnaltC9QKCkla7qX7p8DDAePyOiFmaSvkBvJiGqw&oe=64832251",
+      "title": "Futuro Desarrollador Fullstack Jr",
       "detail": "me considero una persona con iniciativa siempre buscando aprender y dar lo mejor de mí en cada ámbito. Comencé mi carrera en el mundo de la informática hace bastante tiempo siempre inclinándome hacia la programación.",
       "id": 1
     }
   ],
   "works": [
     {
-      "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-revision-codigo_114360-4289.jpg?w=740&t=st=1681014538~exp=1681015138~hmac=f4452fd10abb15d0960cc6c2b6ec0cf40797235e8f5567963aaaeae2c450bf6d",
-      "title": "experiencia laboral 1",
-      "detail": "hola",
+      "img": "https://img.freepik.com/vector-gratis/ingeniero-hombre-que-trabaja-centralita-rack-servidor-computadora-gabinete-panel-conmutacion-guy-cables-opticos-ethernet-enchufados-telecomunicaciones-concepto-ingenieria-ilustracion-plana_74855-20639.jpg?w=740&t=st=1683730078~exp=1683730678~hmac=0346ec33dab6daf07f895f15ad0f2b19edfdd5b6cc5749c9e56b08a54273a7ca",
+      "title": "Implementación de red topología árbol para colegio nivel secundario",
+      "detail": "En contexto de desarrolo de Trabajo Final de la carrera Técnico Sup. de Soporte de Infraestructura de las TICs - Cuyas tareas desempeñadas incluyeron: tendido de cables respetando norma T568 A y B, etiqueta en gabinete, participacion en Instalación y configuración de servidor DHCP SO Ubuntu e Instalación y configuración de router y stwich demas dispositivos requeridos a fin de conformar una topología de red que se ajuste a las necesidades del establecimiento",
       "id": 1
+    },
+    {
+      "img": "https://img.freepik.com/vector-gratis/diseno-curriculum-vitae_1212-314.jpg?w=740&t=st=1683731106~exp=1683731706~hmac=73633407cb0b304fc533c67afc121173f4a75e2fdfeeacc99337d0dcc996d20f",
+      "title": "proyecto de catedra - cv online",
+      "detail": "https://isyd-arisotomayor.000webhostapp.com/PresentacionFinal/",
+      "id": 2
     }
   ],
   "education": [
     {
-      "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-revision-codigo_114360-4289.jpg?w=740&t=st=1681014538~exp=1681015138~hmac=f4452fd10abb15d0960cc6c2b6ec0cf40797235e8f5567963aaaeae2c450bf6d",
-      "title": "titulo educacion 1",
-      "detail": "pequeña reseña de formacion",
+      "img": "https://scontent.firj1-1.fna.fbcdn.net/v/t1.18169-9/248913_301708616596375_967420130_n.jpg?stp=dst-jpg_r90&_nc_cat=100&ccb=1-7&_nc_sid=cdbe9c&_nc_eui2=AeEQfdrxA7L6NjxCcj1FcVjVL2kVyvWxUegvaRXK9bFR6B8Q5ve_6rPrm42XRK9FBVnxikRxbmuCAJNs1juxIvGo&_nc_ohc=IO8t204Bl6sAX96ayXD&_nc_ht=scontent.firj1-1.fna&oh=00_AfDQ0kxA-sNT33mk6B4emlcBMF9OfsveOsIRuhP1qL9NjQ&oe=64830060",
+      "title": "Nivel Secundario",
+      "detail": "Año de finalizacion: 2012 -Escuela Provioncial de Educacion Tecnica N°2 - Modalidad: Maestro mayor de obra ",
       "id": 1
     },
     {
-      "img": "https://img.freepik.com/vector-gratis/computadora-portatil-icono-isometrico-codigo-programa-desarrollo-software-aplicaciones-programacion-neon-oscuro_39422-971.jpg?w=740&t=st=1683721976~exp=1683722576~hmac=7ef649a3164d1c928c3f5e5c78e6fad24d5b3157abc007c94cf2e5aea4116fa8",
-      "title": "titulo educacion 2",
-      "detail": "pequeña reseña de formacion",
+      "img": "https://img.freepik.com/vector-gratis/ilustracion-concepto-revision-codigo_114360-4289.jpg?w=740&t=st=1681014538~exp=1681015138~hmac=f4452fd10abb15d0960cc6c2b6ec0cf40797235e8f5567963aaaeae2c450bf6d",
+      "title": "Tecnico superior en Soporte de infraestructura de las TICs",
+      "detail": "Año de inicio: 2013 - En ISFPT Intitulo Ing Otto Krause ",
+      "id": 1
+    },
+    {
+      "img": "https://th.bing.com/th/id/R.e7b0d73231c7508da90f5b0683570ac4?rik=T%2bhtJ%2b%2frGuy1%2bg&pid=ImgRaw&r=0",
+      "title": "Tecnicatura en informatica",
+      "detail": "Estudiante avanzada - carrera en curso - Universidad Nacional de La Rioja UNLaR",
       "id": 2
     },
     {
-      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
-      "title": "titulo educación 3",
-      "detail": "curso de desarrollador web fullStack Jr",
+      "img": "https://www.argentina.gob.ar/sites/default/files/untitled-3-01_2.png",
+      "title": "Desarrollador FullStack Jr",
+      "detail": "Estado: en curso ",
       "id": 4
     }
   ],
   "skill": [
     {
       "id": 1,
-      " img": "././assets/img/bannerImg.png",
-      "title": "habilidad 1",
+      " img": "image.png",
+      "title": "Html",
       "detail": "70%"
     },
     {
       "id": 2,
       "img": "././assets/img/bannerImg.png",
-      "title": "Habilidad 2",
+      "title": "css",
       "detail": "80%"
     },
     {
       "id": 3,
       " img": "././assets/img/bannerImg.png",
-      "title": "habilidad 3",
-      "detail": "70%"
+      "title": "js",
+      "detail": "jr"
     },
+        {
+      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
+      "title": "java",
+      "detail": "jr"
+      },
     {
       "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
-      "title": "Desarrollador Fullstack Jr",
-      "detail": "Doy lo mejor",
-      "id": 4
+      "title": "C",
+      "detail": "jr"
+     },
+    {
+      "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
+      "title": "ingles tecnico",
+      "detail": "intermedio"
     }
   ],
   "project": [
     {
-      "id": 2,
-      "img": "././assets/img/bannerImg.png",
-      "title": "proyecto 2",
-      "detail": "detalles de proyecto"
-    },
-    {
-      "id": 3,
-      " img": "././assets/img/bannerImg.png",
-      "title": "proyecto 3",
-      "detail": "detalles de proyecto"
+      "id": 1,
+      "img": "/assets/fotoProyecto.jpg",
+      "title": "Propuesta de desarrollo de un sistema de control de stock para un pequeño local de comercio ",
+      "detail": "Basicamente un sistema de control de stock pretende ayudar a llevar un control claro, preciso de la disponibilidad del mismo en deposito y gondolas. Lenguajes de desarrollo la aplicacion escritorio aun no definidos"
     }
   ],
   "footer": [
     {
       "img": "https://img.freepik.com/vector-gratis/programador-estilo-dibujos-animados-trabajando_52683-22693.jpg?w=740&t=st=1681012428~exp=1681013028~hmac=694bfcf1bd78c760c448e6ea4eb3d70d4c07194c58468458d5dcc7ca252a7bf1",
-      "title": "facebook",
+      "title": "Https://wa.me/543804785858",
       "detail": "instagram"
     }
-   
   ]
 }

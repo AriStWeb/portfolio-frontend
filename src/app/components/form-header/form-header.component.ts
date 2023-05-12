@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Dato } from 'src/app/interface';
+import {Banner } from 'src/app/interface';
 
 
 @Component({
@@ -9,8 +9,12 @@ import { Dato } from 'src/app/interface';
 })
 export class FormHeaderComponent {
 
-  @Input() Dato?: Dato;
-  @Output() onEditDato: EventEmitter<Dato> = new EventEmitter();
+  @Input() Dato: Banner={ id : 0,
+                          tituloBanner : "",
+                          fraseBanner : "",
+                          urlImgBanner : ""
+                        };
+  @Output() onEditDato: EventEmitter<Banner> = new EventEmitter();
 
   editarBanner: boolean = false;
 
@@ -30,12 +34,11 @@ export class FormHeaderComponent {
        this.fraseBanner.length === 0) {
       alert("Error no se ingreso ningun cambio!");
     }
-    const newDato = {
-      img: this.urlImgBanner,
-      title: this.tituloBanner,
-      detail: this.fraseBanner,
-      id: this.Dato?.id
-    };
+    const newDato: Banner = { id: this.Dato.id,
+                            urlImgBanner: this.urlImgBanner,
+                            tituloBanner: this.tituloBanner,
+                            fraseBanner: this.fraseBanner,
+                            };
     this.onEditDato.emit(newDato);
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DB, Dato } from 'src/app/interface';
+import { Banner } from 'src/app/interface';
+import { BannerService } from 'src/app/service/banner.service';
 import { DatoserviceService } from 'src/app/service/datoservice.service';
 
 @Component({
@@ -8,21 +9,21 @@ import { DatoserviceService } from 'src/app/service/datoservice.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  banner: Dato[] = [];
-  nombre:string="header";
+  banner: Banner[] = [];
+  nombre:string="banner";
 
-  constructor(private datoService: DatoserviceService) { }
+  constructor(private datoService: BannerService) { }
 
   ngOnInit(): void {
-    this.datoService.getDato(this.nombre).subscribe((Dato) => {
+    this.datoService.getDato().subscribe((Dato) => {
       this.banner = Dato;
     });
   }
 
-  guardarBanner(newBanner: Dato) {
+  guardarBanner(newBanner: Banner) {
     for (let elemento of this.banner) {
       if (elemento.id === newBanner.id) {
-        this.datoService.modifcarRegistro(newBanner,this.nombre).subscribe(() => {
+        this.datoService.modifcarRegistro(newBanner).subscribe(() => {
           this.banner = this.banner.filter(r => r.id !== newBanner.id);
           window.location.reload();
         })

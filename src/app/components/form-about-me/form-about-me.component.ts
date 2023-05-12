@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import { Dato } from 'src/app/interface';
+import { Dato, Persona } from 'src/app/interface';
 
 @Component({
   selector: 'app-form-about-me',
@@ -7,15 +7,27 @@ import { Dato } from 'src/app/interface';
   styleUrls: ['./form-about-me.component.css']
 })
 export class FormAboutMeComponent {
-  @Input() Dato?:Dato;
-  @Output() onEditDato:EventEmitter<Dato> = new EventEmitter();
+  @Output() onEditDato:EventEmitter<Persona> = new EventEmitter();
+  @Input() Dato:Persona={ id:0,
+                        urlFotoPerfil:"",
+                        titulo:"",
+                        edad:"",
+                        sobreMi:"",
+                        nombreApellido:"",
+                        telefono:"",
+                        direccion:""
+                      };
 
   editar:boolean=false;
-id:number=0;
-urlFotoPerfil:string="";
-titulo:string="";
-sobreMi:string="";
-nombreApellido?:string="";
+
+  id=0;
+  urlFotoPerfil="";
+  titulo="";
+  edad="";
+  sobreMi="";
+  nombreApellido="";
+  telefono="";
+  direccion="";
 
 desplegarEdicion(){
   this.editar = !this.editar;
@@ -26,9 +38,15 @@ onSubmit(){
   if (this.urlFotoPerfil.length === 0 && this.titulo.length === 0 && this.sobreMi.length === 0) {
     alert("Error no se ingreso ningun cambio!");
   }
-  const newDato = { nombreApellido: this.nombreApellido, img : this.urlFotoPerfil, title: this.titulo, detail: this.sobreMi, id : this.Dato?.id };
-  console.log(this.Dato);
-  this.onEditDato.emit(newDato);
-  
-}
+  const newDato:Persona = {   id : this.Dato.id,
+                      nombreApellido: this.nombreApellido,
+                      urlFotoPerfil : this.urlFotoPerfil, 
+                      titulo: this.titulo,
+                      sobreMi: this.sobreMi,
+                      direccion: this.direccion,
+                      telefono: this.telefono,
+                      edad: this.edad
+                      };
+    this.onEditDato.emit(newDato);
+                    }
 }
