@@ -54,6 +54,7 @@ export class EducationComponent {
     this.datoService.altaRegistro(registro).subscribe((registro) => {
       this.education.push(registro);
     })
+    window.location.reload();
   }
 
 

@@ -2,7 +2,7 @@
 
 <form *ngIf="editar" class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
     <div>
-        <label for="nombreApellido">Apellido Nombre </label>
+        <label for="nombreApellido">Apellido Nombre <b style="color:red">*</b></label>
         <input type="text" name="nombreApellido" id="nombreApellido" placeholder="ingresa tu apellido y nombre" [(ngModel)]="nombreApellido">
     </div>
     <div >
@@ -10,15 +10,15 @@
         <input type="number" name="edad" id="edad" placeholder="Ingrasa edad" [(ngModel)]="edad">
     </div>
     <div >
-        <label for="urlFotoPerfil">FotoDePerfil</label>
+        <label for="urlFotoPerfil">FotoDePerfil<b style="color:red">*</b></label>
         <input type="text" name="urlFotoPerfil" id="urlFotoPerfil" placeholder="Ingresa Url de Imagen" [(ngModel)]="urlFotoPerfil">
     </div>
     <div >
-        <label for="titulo">Titulo</label>
+        <label for="titulo">Titulo<b style="color:red">*</b></label>
         <input type="text" name="titulo" id="titulo" placeholder="Agregar Titulo" [(ngModel)]="titulo">
     </div>
     <div>
-        <label for="sobreMi">Mas Sobre Mi</label>
+        <label for="sobreMi">Mas Sobre Mi<b style="color:red">*</b></label>
         <input type="text" name="sobreMi" id="sobreMi" placeholder="Aqui puedes escribir sobre ti" [(ngModel)]="sobreMi">
     </div>
     <div>

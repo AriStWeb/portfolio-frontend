@@ -23,8 +23,8 @@ export class ExperienciaService {
   }
 
   modifcarRegistro(dato:ExperienciaLaboral): Observable<ExperienciaLaboral> {
-    const url = "http://localhost:8080/experienciaLaboral/editar/"+`${dato.id}`;
-    const param = `?nombreExpLab=${dato.nombreExpLab}&descripcionExpLab=${dato.descripcionExpLab}&anioInicioExpLab=${dato.anioInicioExpLab}&anioFinExpLab=${dato.anioFinExpLab}&nombreLugarExpLab=${dato.nombreLugarExpLab}&imgExpLab=${dato.imgExpLab}`;
+    const url = "http://localhost:8080/experiencia/editar/"+`${dato.id}`;
+    const param =`?nombreExpLab=${dato.nombreExpLab}&descripcionExpLab=${dato.descripcionExpLab}&anioInicioExpLab=${dato.anioInicioExpLab}&anioFinExpLab=${dato.anioFinExpLab}&nombreLugarExpLab=${dato.nombreLugarExpLab}&imgExpLab=${dato.imgExpLab}`;
     return this.http.put<ExperienciaLaboral>(url+param, dato);
   }
 

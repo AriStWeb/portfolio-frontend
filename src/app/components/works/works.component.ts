@@ -37,7 +37,7 @@ export class WorksComponent {
     }
   }
   eliminarRegistro(registro: ExperienciaLaboral) {
-    if (this.works.length != 1) {
+      if (this.works.length != 1) {
       this.datoService.eliminarRegistro(registro).subscribe(
         () => {
           this.works = this.works.filter(r => r.id != registro.id);

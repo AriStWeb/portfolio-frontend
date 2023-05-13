@@ -26,19 +26,22 @@ anioInicioEduc: number=0;
 anioFinEduc:number=0;
 nombreOrgEduc: string="";
 
-onSubmit(){
-  if (this.imgEduc.length === 0 || this.nombre_educ.length === 0 || this.descripcionEduc.length === 0) {
-    alert("¡completa los camposoblifatorios!");
+  onSubmit(){
+    if (this.imgEduc.length === 0 || this.nombre_educ.length === 0 || this.descripcionEduc.length === 0 ) {
+      alert("¡Error: completa los campos obligatorios!");
+    }
+    else {
+      const newDato:Educacion = { 
+        id : this.Dato.id,
+        imgEduc: this.imgEduc,
+        nombre_educ: this.nombre_educ,
+        descripcionEduc: this.descripcionEduc,
+        anioInicioEduc:this.anioInicioEduc,
+        anioFinEduc: this.anioFinEduc,
+        nombreOrgEduc:this.nombreOrgEduc
+        };
+  
+      this.onEditDato.emit(newDato);
+    }
   }
-  const newDato:Educacion = { id : this.Dato.id,
-    imgEduc: this.imgEduc,
-    nombre_educ: this.nombre_educ,
-    descripcionEduc: this.descripcionEduc,
-    anioInicioEduc:this.anioInicioEduc,
-    anioFinEduc: this.anioFinEduc,
-    nombreOrgEduc:this.nombreOrgEduc
-       };
-  console.log(this.Dato);
-  this.onEditDato.emit(newDato);
-}
 }

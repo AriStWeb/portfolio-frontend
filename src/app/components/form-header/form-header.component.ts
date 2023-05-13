@@ -29,17 +29,19 @@ export class FormHeaderComponent {
     }
     
   onSubmit() {
-    if (this.urlImgBanner.length === 0 && 
-      this.tituloBanner.length === 0 &&
+    if (this.urlImgBanner.length === 0 || 
+      this.tituloBanner.length === 0 ||
        this.fraseBanner.length === 0) {
-      alert("Error no se ingreso ningun cambio!");
+      alert("complete los campos obligatorios marcados con *");
     }
-    const newDato: Banner = { id: this.Dato.id,
-                            urlImgBanner: this.urlImgBanner,
-                            tituloBanner: this.tituloBanner,
-                            fraseBanner: this.fraseBanner,
-                            };
-    this.onEditDato.emit(newDato);
+    else{
+      const newDato: Banner = { id: this.Dato.id,
+                              urlImgBanner: this.urlImgBanner,
+                              tituloBanner: this.tituloBanner,
+                              fraseBanner: this.fraseBanner,
+                              };
+      this.onEditDato.emit(newDato);
+    }
   }
 }
 

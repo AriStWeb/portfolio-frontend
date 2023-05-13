@@ -32,5 +32,5 @@ export class EducacionService {
   altaRegistro(dato: Educacion): Observable<Educacion> {
     const url = "http://localhost:8080/educacion/agregar";
     return this.http.post<Educacion>(url, dato);
-  }
+   }
 }

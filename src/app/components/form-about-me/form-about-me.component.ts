@@ -35,18 +35,22 @@ desplegarEdicion(){
   }
 
 onSubmit(){
-  if (this.urlFotoPerfil.length === 0 && this.titulo.length === 0 && this.sobreMi.length === 0) {
-    alert("Error no se ingreso ningun cambio!");
+  if (this.urlFotoPerfil.length === 0 || this.titulo.length === 0 || this.sobreMi.length === 0) {
+    alert("por favor complete los campos obligatorios marcados con*!");
   }
-  const newDato:Persona = {   id : this.Dato.id,
-                      nombreApellido: this.nombreApellido,
-                      urlFotoPerfil : this.urlFotoPerfil, 
-                      titulo: this.titulo,
-                      sobreMi: this.sobreMi,
-                      direccion: this.direccion,
-                      telefono: this.telefono,
-                      edad: this.edad
-                      };
-    this.onEditDato.emit(newDato);
-                    }
+  else{
+    const newDato:Persona = 
+    {   id : this.Dato.id,
+        nombreApellido: this.nombreApellido,
+        urlFotoPerfil : this.urlFotoPerfil, 
+        titulo: this.titulo,
+        sobreMi: this.sobreMi,
+        direccion: this.direccion,
+        telefono: this.telefono,
+        edad: this.edad
+        };
+      this.onEditDato.emit(newDato);
+    }
+   }
+
 }

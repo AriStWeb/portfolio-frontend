@@ -28,7 +28,8 @@ export class FormWorkComponent {
     if (this.imgExpLab.length === 0 || this.nombreExpLab.length === 0 || this.descripcionExpLab.length === 0) {
       alert("Error no se ingreso ningun cambio!");
     }
-    const newDato:ExperienciaLaboral = {  imgExpLab: this.imgExpLab,
+    else{
+      const newDato:ExperienciaLaboral = {  imgExpLab: this.imgExpLab,
                                           nombreExpLab: this.nombreExpLab,
                                           descripcionExpLab: this.descripcionExpLab,
                                           id: this.Dato.id,
@@ -38,5 +39,6 @@ export class FormWorkComponent {
 
                                         };
       this.anDato.emit(newDato);
+    }
   }
 }

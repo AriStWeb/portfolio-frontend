@@ -1,14 +1,14 @@
 <form class="container bg-secondary form-contorl" (ngSubmit)="onSubmit()">
     <div >
-        <label for="imgEduc">Imagen</label>
+        <label for="imgEduc">Imagen <b style="color:red">*</b></label>
         <input type="text" name="imgEduc"  placeholder="Ingresa Url de Imagen" [(ngModel)]="imgEduc">
     </div>
     <div >
-        <label for="nombre_educ">Titulo</label>
+        <label for="nombre_educ">Titulo <b style="color:red">*</b></label>
         <input type="text" name="nombre_educ" placeholder="Desiganar educacion" [(ngModel)]="nombre_educ">
     </div>
     <div>
-        <label for="descripcionEduc">Detalles</label>
+        <label for="descripcionEduc">Detalles <b style="color:red">*</b></label>
         <input type="text" name="descripcionEduc" id="detail" placeholder="Agregar Detalle de educacion" [(ngModel)]="descripcionEduc">
     </div>
     <div >
