@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TecnologiaService {
 
-  private urlApiTecnologia="http://localhost:8080";
+  private urlApiTecnologia="https://portfolio-backend-final-1pe1.onrender.com";
   
   constructor( private http:HttpClient) { }
 

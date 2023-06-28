@@ -8,7 +8,7 @@ import { Observable} from 'rxjs';
 })
 export class BannerService {
 
-  private urlApiHeader="http://localhost:8080";
+  private urlApiHeader="https://portfolio-backend-final-1pe1.onrender.com";
   
 
   constructor( private http:HttpClient) { }
@@ -18,7 +18,7 @@ export class BannerService {
   }
 
   eliminarRegistro(Dato:Banner):Observable<Banner>{
-    const url = "http://localhost:8080/banner/eliminar/"+`${Dato.id}`;
+    const url = "https://portfolio-backend-final-1pe1.onrender.com/banner/eliminar/"+`${Dato.id}`;
     return this.http.delete<Banner>(url);
   }
 
@@ -29,7 +29,7 @@ export class BannerService {
   }
 
   altaRegistro(dato: Banner): Observable<Banner> {
-    const url = "http://localhost:8080/banner/agregar";
+    const url = "https://portfolio-backend-final-1pe1.onrender.com/banner/agregar";
     return this.http.post<Banner>(url, dato);
   }
 }

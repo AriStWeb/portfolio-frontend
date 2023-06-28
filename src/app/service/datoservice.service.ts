@@ -7,11 +7,11 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class DatoserviceService {
-  private urlApiHeader="http://localhost:8080";
+  private urlApiHeader="https://portfolio-backend-final-1pe1.onrender.com";
   private urlApi= [
   {
     id:"proyecto",
-    url:"http://localhost:8080/proyecto"
+    url:"https://portfolio-backend-final-1pe1.onrender.com/proyecto"
   }
 ]
 

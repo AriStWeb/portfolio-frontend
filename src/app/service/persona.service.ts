@@ -8,7 +8,7 @@ import { Observable} from 'rxjs';
 })
 export class PersonaService {
 
-  private urlApiHeader="http://localhost:8080";
+  private urlApiHeader="https://portfolio-backend-final-1pe1.onrender.com";
  
   constructor( private http:HttpClient) { }
 
@@ -29,7 +29,7 @@ export class PersonaService {
   }
 
   altaRegistro(dato: Persona): Observable<Persona> {
-    const url = "http://localhost:8080/persona/agregar";
+    const url = "https://portfolio-backend-final-1pe1.onrender.com/persona/agregar";
     return this.http.post<Persona>(url, dato);
   }
 }

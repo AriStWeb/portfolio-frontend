@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProyectoService {
 
-  private urlApiProyecto="http://localhost:8080";
+  private urlApiProyecto="https://portfolio-backend-final-1pe1.onrender.com";
  
 
   constructor( private http:HttpClient) { }
