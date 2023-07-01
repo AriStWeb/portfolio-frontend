@@ -18,18 +18,18 @@ export class ExperienciaService {
   }
 
   eliminarRegistro(dato:ExperienciaLaboral):Observable<ExperienciaLaboral>{
-    const url = "https://portfolio-backend-final-1pe1.onrender.com//experienciaLaboral/eliminar/"+`${dato.id}`;
+    const url = this.urlApiExperiencia+"//experienciaLaboral/eliminar/"+`${dato.id}`;
     return this.http.delete<ExperienciaLaboral>(url);
   }
 
   modifcarRegistro(dato:ExperienciaLaboral): Observable<ExperienciaLaboral> {
-    const url = "https://portfolio-backend-final-1pe1.onrender.com//experiencia/editar/"+`${dato.id}`;
+    const url = this.urlApiExperiencia+"//experiencia/editar/"+`${dato.id}`;
     const param =`?&nombreExpLab=${dato.nombreExpLab}&descripcionExpLab=${dato.descripcionExpLab}&anioInicioExpLab=${dato.anioInicioExpLab}&anioFinExpLab=${dato.anioFinExpLab}&nombreLugarExpLab=${dato.nombreLugarExpLab}&imgExpLab=${dato.imgExpLab}`;
     return this.http.put<ExperienciaLaboral>(url+param, dato);
   }
 
   altaRegistro(dato: ExperienciaLaboral): Observable<ExperienciaLaboral> {
-    const url = "https://portfolio-backend-final-1pe1.onrender.com//experienciaLaboral/agregar";
+    const url = this.urlApiExperiencia+"//experienciaLaboral/agregar";
     return this.http.post<ExperienciaLaboral>(url, dato);
   }
 }
