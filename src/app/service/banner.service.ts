@@ -23,11 +23,10 @@ export class BannerService {
   }
 
   modifcarRegistro(dato:Banner): Observable<Banner> {
-    const url = `${this.urlApiHeader}/banner/editar/${dato.id}`;
-    const param = `?tituloBanner=${dato.tituloBanner}&fraseBanner=${dato.fraseBanner}&urlImgBanner=${dato.urlImgBanner}`;
+    const url = `${this.urlApiHeader}/banner/editar/${dato.id}?`;
+    const param = `?&tituloBanner=${dato.tituloBanner}&fraseBanner=${dato.fraseBanner}&urlImgBanner=${dato.urlImgBanner}`;
     return this.http.put<Banner>(url, dato);
   }
-
   altaRegistro(dato: Banner): Observable<Banner> {
     const url = "https://portfolio-backend-final-1pe1.onrender.com/banner/agregar";
     return this.http.post<Banner>(url, dato);

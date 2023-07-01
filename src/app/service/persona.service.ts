@@ -24,7 +24,7 @@ export class PersonaService {
 
   modifcarRegistro(dato:Persona,component:string): Observable<Persona> {
     const url = `${this.urlApiHeader}/persona/editar/${dato.id}`;
-    const param = `?nombreApellido=${dato.nombreApellido}&edad=${dato.edad}&titulo=${dato.titulo}&direccion=${dato.direccion}&telefono=${dato.telefono}&sobreMi=${dato.sobreMi}&urlFotoPerfil=${dato.urlFotoPerfil}`;
+    const param = `?&nombreApellido=${dato.nombreApellido}&edad=${dato.edad}&titulo=${dato.titulo}&direccion=${dato.direccion}&telefono=${dato.telefono}&sobreMi=${dato.sobreMi}&urlFotoPerfil=${dato.urlFotoPerfil}`;
     return this.http.put<Persona>(url+param, dato);
   }
 
