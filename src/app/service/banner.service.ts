@@ -23,9 +23,9 @@ export class BannerService {
   }
 
   modifcarRegistro(dato:Banner): Observable<Banner> {
-    const url = `${this.urlApiHeader}/banner/editar/${dato.id}?`;
+    const url = `${this.urlApiHeader}/banner/editar/${dato.id}`;
     const param = `?&tituloBanner=${dato.tituloBanner}&fraseBanner=${dato.fraseBanner}&urlImgBanner=${dato.urlImgBanner}`;
-    return this.http.put<Banner>(url, dato);
+    return this.http.put<Banner>(url+param, dato);
   }
   altaRegistro(dato: Banner): Observable<Banner> {
     const url = "https://portfolio-backend-final-1pe1.onrender.com/banner/agregar";
